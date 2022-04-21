@@ -1,5 +1,6 @@
-import { BaseEntity, Column, Double, PrimaryGeneratedColumn } from "typeorm";
+import { PrimaryGeneratedColumn, Column, BaseEntity, Entity } from 'typeorm';
 
+@Entity("itens")
 export default class Item extends BaseEntity {
     @PrimaryGeneratedColumn("increment") 
     id: number

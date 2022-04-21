@@ -1,8 +1,9 @@
 import express from "express";
-import connection from "./database/connection";
+import { connectionSource } from '../ormconfig';
 
 const app = express();
-connection.then(() => {
+
+connectionSource.initialize().then(() => {
     console.log("connected with database")
 })
 
